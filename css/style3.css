@@ -1,0 +1,220 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+html {
+    display: block;
+}
+
+head {
+    display: none;
+}
+
+header {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    column-gap: 2em;
+    position: flex;
+    z-index: 1;
+    background-color: #5b2d7e;
+}
+
+header i {
+    font-size: 18px;
+}
+
+header img {
+    height: 30px;
+}
+
+#logo {
+    height: 25px;
+    margin: 10px 10px 10px -20px;
+}
+
+#logo2 {
+    height: 25px;
+    margin-bottom: -5px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 10px 10px 10px 10px;;
+}
+
+#idkit {
+    height: auto;
+max-width: 100%;
+border: none;
+border-radius: 0;
+box-shadow: none;
+}
+
+.orangediv {
+    background-color: #FF691E;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.ctimer {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.oferta {
+    margin: 0px 0px 0px 30px;
+    padding: 0px 0px 0px 0px;
+    width: 100%;
+}
+
+#timer {
+    
+    font-weight: bold;
+    color: white;
+    font-size: 20pt;
+    margin: 10px 30px 0px 0px;
+    font-size: 40px;
+}
+
+.container {
+    margin: 0px 0px;
+    padding: 0px 20px;
+}
+
+.container2 {
+    margin: 0px 0px;
+    padding: 20px 0px;
+}
+
+.shoename{
+    font-size: 21px;
+    line-height: 1.4em;
+    color: #333333;
+    font-family: "Roboto", Sans-serif;
+    font-weight: 700;
+}
+
+.ctnimg {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: stretch;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.ctnimg img{
+    width: 25%;
+    margin: 0px 0px;
+    padding: 0px 0px;
+}
+
+.ctnimg h2 {
+    font-size: 15px;
+    margin: 0px 0px;
+    padding: 5px 5px;
+}
+
+.hr {
+    margin: 15px 0px;
+    padding: 0px 0px;
+}
+
+.shoesize {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#select {
+    width: 100%;
+    max-width: 100%;
+    height: 30px;
+    border: 1px solid #69727d;
+    background-color: transparent;
+    color: #1f2124;
+    vertical-align: middle;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+option {
+    font-weight: normal;
+    display: block;
+    min-height: 1.2em;
+    padding: 0px 2px 1px;
+    white-space: nowrap;
+}
+
+.price {
+    color: #677279;
+    font-family: "Roboto", Sans-serif;
+    font-weight: 400;
+    text-decoration: line-through;
+    font-size: 18px;
+    margin: 10px 5px;
+}
+
+.price2 {
+    font-size: 31px;
+    margin: -15px 0px 0px 0px;
+}
+
+.estoque img {
+    display: flex;
+    margin: -3px 0px 0px -25px;
+    padding: 0px 500px 0px 0px;
+
+}
+
+.resg {
+    font-size: 18px;
+    border-radius: 10px 10px 10px 10px;
+    padding: 15px 40px 15px 40px;
+    font-family: "Roboto", Sans-serif;
+    font-weight: 700;
+    background-color: #613884;
+}
+
+.resg a {
+    text-decoration: inherit;
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+}
+
+.coment img {
+    display: flex;
+    margin: 0px 0px 0px 80px;
+    padding: 0px 0px 0px 0px;
+}
+
+#uglydsc {
+    padding: 10px 10px 10px 10px;
+}
+
+.foot {
+    margin: 0px 0px;
+    padding: 20px 0px;
+}
+
+.foot img {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    width: 100%;
+}

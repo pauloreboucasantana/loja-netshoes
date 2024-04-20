@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="css/style3.css">
+    <title>Tênis Puma Flyer Flex Bdp + Garrafinha FARM de Brinde - Netshoes</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="images/logo_1.png">
+    <link rel="stylesheet" href="css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    
+  </head>
+  <body>
+    <header>
+      <a href="index.html"><i><img src="images/menu.png" alt="#"></i></a>
+      <i class="fa-solid fa-bars" style="color: white"></i>
+      <a href="index.html"><img src="images/logo.png" alt="#" id="logo"></a>
+      <a href="index.html"><i><img src="images/shop.png" alt="#" id="logo2"></i></a>
+    </header>
+
+    <div>
+        <div>
+            <div>
+                <div class="cntkit">
+                    <img src="images/kit5.jpg" alt="#" id="idkit">
+                </div>
+            </div>
+
+            <div>
+                <div>
+                    <div class="orangediv">
+                        <div >
+                            <div>
+                                <img src="images2/oferta.jpg" alt="#" class="oferta"> 
+                            </div>
+                        </div>
+
+                        <div class="ctimer">
+                            <div>
+                               <p id="timer">10:00:00</p>
+                            </div>
+                        </div>
+
+                        <script>
+                            function updateTimer() {
+                                const now = new Date();
+                                const midnight = new Date(now);
+                                midnight.setHours(24, 0, 0, 0); // Set to next midnight.
+                        
+                                const diff = midnight - now; // Difference in milliseconds.
+                        
+                                let hours = Math.floor(diff / 1000 / 60 / 60);
+                                let minutes = Math.floor(diff / 1000 / 60) % 60;
+                                let seconds = Math.floor(diff / 1000) % 60;
+                        
+                                hours = hours < 10 ? '0' + hours : hours;
+                                minutes = minutes < 10 ? '0' + minutes : minutes;
+                                seconds = seconds < 10 ? '0' + seconds : seconds;
+                        
+                                document.getElementById('timer').innerText = `${hours}:${minutes}:${seconds}`;
+                        
+                                // Check every second
+                                setTimeout(updateTimer, 1000);
+                            }
+                        
+                            updateTimer(); // Start the timer.
+                        </script> 
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div>
+                    <div class="container">
+                        <div class="container2">
+                            <div>
+                                <h2 class="shoename">Tênis Puma Flyer Flex Bdp + Garrafinha FARM de Brinde</h2>
+                            </div>
+                            <div>
+                                <div>
+                                    <div>
+                                        <div class="ctnimg">
+                                            <img src="images2/star2.png" alt="#"><h2>1.715 avaliações</h2>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <div>
+                                            
+                                        </div>
+                                    </div>
+                                
+                                    <hr class="hr"></hr>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div>
+                                <h2 class="shoesize">Tamanho Tênis:</h2>
+                                <div>                              
+                                    <div>
+                                        <select name="" id="select">
+                                            <option value="">34</option>
+                                            <option value="">35</option>
+                                            <option value="">36</option>
+                                            <option value="">37</option>
+                                            <option value="">38</option>
+                                            <option value="">39</option>
+                                            <option value="">40</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div>
+                                <h2 class="price">R$ 299,90</h2>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div class="price2">
+                                <h2>R$ 0,00</h2>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div>
+                                <div>
+                                    <div class="estoque">
+                                        <img src="images2/Screenshot_3.jpg" alt="#">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="resg">
+                                <a href="">RESGATAR AGORA</a>  
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>       
+    </div>
+
+
+    <div class="baixo">
+        <div>
+            <div>
+                <img src="images2/kit5descrip.jpg" alt="#">
+            </div>
+        </div>
+        <div>
+            <div>
+                <img src="images2/garantia.jpg" alt="#">
+            </div>
+        </div>
+        <div>
+            <div>
+                <div>
+                    <div class="coment">
+                        <img src="images2/coment.jpg" alt="#">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="foot">
+        <div>
+            <img src="images/footer.jpg" alt="#">
+        </div>
+    </footer>
+  
+  </body>
+
+</html>

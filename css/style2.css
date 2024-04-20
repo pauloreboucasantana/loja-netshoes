@@ -1,0 +1,246 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+html {
+    display: block;
+}
+
+head {
+    display: none;
+}
+
+header {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    column-gap: 2em;
+    position: flex;
+    z-index: 1;
+    background-color: #5b2d7e;
+}
+
+header i {
+    font-size: 18px;
+}
+
+header img {
+    height: 30px;
+}
+
+#logo {
+    height: 25px;
+    margin: 10px 10px 10px -20px;
+}
+
+#logo2 {
+    height: 25px;
+    margin-bottom: -5px;
+}
+
+.popup__progress.ativo {
+    display: flex;
+}
+
+.popup__progress {
+    margin: .75rem 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+}
+
+.popup__progress-item {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    border: 2px solid #27251f;
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup__progress-atual::after {
+    content: "";
+    display: block;
+    width: .75rem;
+    height: .75rem;
+    background-color: #27251f;
+    border-radius: 50%;
+}
+
+.popup__progress-line {
+    height: 2px;
+    width: 48px;
+    background-color: #27251f;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 10px 10px 10px 10px;;
+}
+
+.card {
+    width: 100%;
+    height: fit-content;
+    padding: 20px;
+    border: 1px solid #d3d3d3;
+    background-color: #f1f1f1;
+    border-radius: 15px;
+}
+
+.card__logo img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    max-height: 250px;
+}
+
+.card__logo2 img {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    max-height: 250px;
+}
+
+.chosepdt {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 20px 0px 20px;
+}
+
+.chosepdt h2 {
+    font-size: 35px;
+}
+
+.container1 {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    
+}
+
+.container2 {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: stretch;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.container3 {
+        display: flex;
+        box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.05);
+        border-radius: 20px;
+        margin: 10px 0px 10px 0px;
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        max-width: 225px;
+}
+
+.contimg {
+        vertical-align: middle;
+        display: inline-block;
+        height: auto;
+        max-width: 100%;
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+        padding: 10px 10px 10px 10px;
+}
+
+.pdtname {
+    margin: 10px 15px 10px 15px;
+}
+
+.pdtname h2 {
+    font-size: 15px;
+    line-height: 1.1em;
+    color: #000000;
+    font-family: "Roboto", Sans-serif;
+    font-weight: 600;
+}
+
+.price {
+    margin: -10px 0px 4px 15px;;
+}
+
+.price h2 {
+    font-size: 14px;
+    color: #8D8D8D;
+    font-family: "Roboto", Sans-serif;
+    font-weight: 700;
+    text-decoration: line-through;
+}
+
+.promo h2 {
+    font-size: 25px;
+    color: #000000;
+    font-family: "Roboto", Sans-serif;
+    font-weight: 600;
+    margin: -5px 0px -8px 14px;
+}
+
+.divresg {
+    margin: 14px 0px 0px 0px;
+}
+
+.btnresg {
+    font-size: 17px;
+    border-radius: 10px 10px 10px 10px;
+    padding: 14px 14px 14px 14px;
+    font-family: "Roboto", Sans-serif;
+    font-weight: 700;
+    background-color: #613884;
+    margin: 10px;
+}
+
+#btnresgg {
+    font-size: 17px;
+    border-radius: 10px 10px 10px 10px;
+    padding: 14px 14px 14px 14px;
+    font-family: "Roboto", Sans-serif;
+    font-weight: 700;
+    background-color: #34194B;
+    margin: 10px;
+}
+
+#btnresgg a {
+    text-decoration: inherit;
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+}
+
+.btnresg a {
+    text-decoration: inherit;
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+}
+
+.foot {
+    margin: 100px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+}
+
+.foot img {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    width: 100%;
+}
